@@ -2,6 +2,9 @@ import React, { Fragment } from 'react'
 import axios from "axios";
 import { useState, useEffect } from 'react';
 
+import * as styles from './leagues.module.css'
+import { Epl } from './nav-tabs-data';
+
 const Leagues = ({competitions}) => {
   const [fixtures, setFixtures] = useState([])
 
@@ -22,24 +25,38 @@ const Leagues = ({competitions}) => {
     });
   }, [])
 
+  const addPrediction = (e) => {
+    e.preventDefault()
+    console.log("edit prediction was clicked")
+  }
+
   return (
     <Fragment>
       {
         Object.keys(fixtures).map((matchday) => (
-          <Fragment key={matchday}>
+          <div style={{ backgroundColor:'white', padding:'10px 0', marginBottom:'5px' }} key={matchday}>
+            <h1 style={{textAlign:'center'}}>{matchday}</h1>
+            <div className={styles.fixtureRow}>
             {
             fixtures[matchday].map((({MatchDay, awayLogo, awayTeam, homeLogo, homeTeam }) => (
-              <Fragment>
-                <div>{MatchDay}</div>
-                <div>{awayLogo}</div>
-                <div>{awayTeam}</div>
-                <div>{homeLogo}</div>
-                <div>{homeTeam}</div>
-              </Fragment>
+              <div className={styles.fixtureCard}>
+                <div className={styles.cardHead}>{MatchDay}</div>
+                <div className={styles.cardBody}>
+                  <img src={homeLogo} alt={`${homeTeam} logo`} />
+                  <h3>{homeTeam}</h3>
+                  <div style={{display:'flex', justifyContent:'center', alignItems:'baseline'}}>
+                    <hr style={{width:'25%', justifySelf:'center'}} /> <span style={{fontSize:'24px', margin:'0 5px'}}>vs</span> <hr style={{width:'25%'}}  />
+                  </div>
+                  <img src={awayLogo} alt={`${awayTeam} logo`} />
+                  <h3>{awayTeam}</h3>
+                  <button onClick={addPrediction}>Predict Match Result</button>
+                </div>
+                
+              </div>
             )))
             }
-          </Fragment>
-          
+            </div>
+          </div>
           )
         )  
       }

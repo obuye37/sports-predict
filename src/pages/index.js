@@ -5,6 +5,7 @@ import Banner from "../components/public-components/banner/banner"
 import NavTabs from "../components/public-components/navigations/nav-tabs"
 
 const IndexPage = () => {
+  console.log(process.env)
   return (
   <Layout>
     <Seo title="Home" />

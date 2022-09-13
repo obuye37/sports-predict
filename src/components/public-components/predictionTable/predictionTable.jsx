@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import * as styles from './prediction-table.module.css'
 
 const  PredictionTable = () => {
@@ -57,14 +57,14 @@ const  PredictionTable = () => {
                 <div>{id}</div>
                 <div className={styles.fixtures}>
                     <div className={styles.hometeam}>
-                        <img className='teamlogo' src={homeLogo}/>
+                        <img className='teamlogo' src={homeLogo} alt={`${homeTeam} Logo`}/>
                         <div>{homeTeam}</div>
                         <div className={styles.predictions}>{homePrediction}</div>
                     </div>
                     <div className={styles.awayteam}>
                         <div className={styles.predictions}>{awayPrediction}</div>
                         <div>{awayTeam}</div>
-                        <img src={awayLogo} className="teamlogo" />
+                        <img src={awayLogo} className="teamlogo" alt={`${awayTeam} Logo`} />
                     </div>
                 </div>
                 <div className={styles.matchday}>{MatchDay}</div>           

@@ -3,9 +3,7 @@ import { Tab, Tabs, TabPanel } from 'react-tabs'
 import { Burdesliga, Epl, Laliga, Ligue1, SerieA } from '../../admin-components/leagues-data/nav-tabs-data'
 import SearchInput from '../search/searchInput'
 import * as styles from './nav-tabs.module.css'
-import PredictionTable from "../predictionTable/predictionTable"
 import { RegisterBtn } from '../buttons/register-btn'
-import { Leagues } from '../../admin-components/leagues-data/leagues-data'
 
 
 const NavTabs = () => {
@@ -23,7 +21,7 @@ const NavTabs = () => {
           <SearchInput />
         </div>
         <TabPanel>
-        <PredictionTable />
+        <Epl />
         </TabPanel>
         <TabPanel>
          <Laliga />

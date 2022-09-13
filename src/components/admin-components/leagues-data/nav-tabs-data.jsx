@@ -1,9 +1,10 @@
 import React from "react"
+import PredictionTable from "../../public-components/predictionTable/predictionTable"
 import  Leagues  from "./leagues-data"
 
 export const Epl = () => {
     return(
-        <Leagues competitions='premierleague' />
+        <PredictionTable />
     )
 }
 
@@ -15,25 +16,18 @@ export const Laliga = () => {
 
 export const SerieA = () => {
     return(
-        <div>SERIE A Data</div>
+        <Leagues competitions='seriea' />
     )
 }
 
-export const Burdesliga = () => {
+export const Bundesliga = () => {
     return(
-        <div>BURDESLIGA Data</div>
+        <Leagues competitions='bundesliga'/>
     )
 }
 
 export const Ligue1 = () => {
     return(
-        <div>LIGUE 1 Data</div>
+        <Leagues competitions={`ligue1`}/>
     )
 }
-
-// const epldata = {
-//     fixtures : {
-//         id: 1,
-//         fixture: Manchester
-//     }
-// }

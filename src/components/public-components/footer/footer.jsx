@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import * as styles from './footer.module.css'
-import { Facebook, Grid, PhoneCall, Twitter, Youtube } from 'react-feather'
+import { Facebook, PhoneCall, Twitter, Youtube } from 'react-feather'
 import Navigation from '../navigations/navigations'
+
 
 const Footer = () => {
   return (
+
     <footer
         style={{
         fontSize: `var(--font-sm)`,
@@ -31,6 +34,7 @@ const Footer = () => {
         <div>
           <h2 style={{ margin:0, }}>Quick Links</h2>
           <Navigation />
+          <Link to="/admin">Login Admin</Link>
         </div>
         <div>
           <h2 style={{
@@ -41,7 +45,6 @@ const Footer = () => {
             <input type="button" value="Subscribe" />
           </div>
           <small>Subscribe to receive our weekly predictions earlier</small>
-          
         </div>
       </div>
       <div className={styles.bottom_footer}>

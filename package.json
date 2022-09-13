@@ -6,6 +6,7 @@
   "author": "bomajehori",
   "dependencies": {
     "axios": "^0.27.2",
+    "dot-env": "^0.0.1",
     "gatsby": "^4.22.0",
     "gatsby-plugin-image": "^2.22.0",
     "gatsby-plugin-manifest": "^4.22.0",
