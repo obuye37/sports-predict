@@ -1,0 +1,16 @@
+.registerBtn {
+    text-align: center;
+    padding: 15px;
+}
+
+.registerBtn a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.registerBtn a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #999;
+}

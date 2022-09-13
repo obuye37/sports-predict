@@ -1,0 +1,59 @@
+.table_header {
+    display: grid;
+    background-color: coral;
+    margin: 10px auto;
+    padding: 1rem 1.3rem;
+    grid-template-columns: 1fr 9fr 2fr;
+    color:white;
+    font-size: 1rem;
+}
+
+.table_body {
+    background-color:whitesmoke;
+    margin: 10px auto;
+    padding: 1.5rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.3rem;
+    display: grid;
+    grid-template-columns: 1fr 9fr 2fr;
+}
+
+.table_container { 
+    min-width:90%; 
+    margin: 10px auto;
+    width:85%;
+}
+
+.fixtures {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+    padding: 0 10%;
+}
+
+.hometeam, .awayteam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .teamlogo {
+    margin:0;
+} */
+
+.matchday {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.predictions {
+    font-weight: bold;
+    padding:7px 10px;
+    border-radius: 10%;
+    box-sizing:border-box;
+    border-width: 2px;
+    box-shadow: 0px 1px 5px 2px forestgreen inset;
+    font-size: 1.2rem;
+}

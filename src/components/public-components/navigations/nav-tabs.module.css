@@ -1,0 +1,11 @@
+.sub_nav_container {
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    background-color: #151515;
+    padding:10px; 
+    color:#ddd; 
+    font-weight: bold;
+}
+

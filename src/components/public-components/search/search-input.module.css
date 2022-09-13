@@ -1,0 +1,40 @@
+/* input */
+.searchInput {
+    background: #FFFFFF;
+    border-radius: 6px;
+    border-width: 0px;
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    /* transform: skew(.15rad); */
+    align-self: flex-end;
+}
+
+.searchContainer {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* placeholder... */
+.input::placeholder {
+font-style: normal;
+font-size: 14px;
+line-height: 30px;
+color: #DFE4FF;
+}
+
+
+/* search */
+.searchIcon {
+    position: absolute;
+    color:#4A4A4A;
+    cursor: pointer;
+    top: 10%;
+    right: 25px;
+}
+
+.searchIcon:focus {
+    border: none;
+}

@@ -1,0 +1,41 @@
+{
+  "name": "sports-predict",
+  "private": true,
+  "description": "Sports predict platform",
+  "version": "0.1.0",
+  "author": "bomajehori",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "gatsby": "^4.22.0",
+    "gatsby-plugin-image": "^2.22.0",
+    "gatsby-plugin-manifest": "^4.22.0",
+    "gatsby-plugin-sharp": "^4.22.0",
+    "gatsby-source-filesystem": "^4.22.0",
+    "gatsby-transformer-sharp": "^4.22.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-feather": "^2.0.10",
+    "react-tabs": "^5.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/obuye37/sports-predict"
+  }
+}
