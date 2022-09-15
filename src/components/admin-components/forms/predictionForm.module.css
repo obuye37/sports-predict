@@ -1,0 +1,28 @@
+.container {
+    position:absolute;
+    width: 40%;
+    top: 50%;
+    background-color: aliceblue;
+    padding: 2%;
+}
+
+.form {
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.inputs {
+    padding:.6rem;
+    width: 90%;
+}
+
+.button {
+    background-color: #a52a2a;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #a52a2aaa;
+}

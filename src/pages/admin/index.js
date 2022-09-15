@@ -3,12 +3,14 @@ import { Tab, TabList, TabPanel, Tabs } from 'react-tabs'
 import Leagues from '../../components/admin-components/leagues-data/leagues-data'
 import Layout from '../../components/public-components/layout/layout'
 
+import * as styles from './adminIndex.module.css'
+
 const Admin = () => {
 
   return (
     <Layout>
       <Tabs>
-        <TabList>
+        <TabList className={styles.tabList}>
           <Tab>EPL</Tab>
           <Tab>La Liga</Tab>
           <Tab> Bundesliga </Tab>

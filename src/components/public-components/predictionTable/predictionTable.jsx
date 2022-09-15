@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './prediction-table.module.css'
 
-const  PredictionTable = () => {
+const  PredictionTable = ({ league }) => {
     const matches = [
         {
             id:1,

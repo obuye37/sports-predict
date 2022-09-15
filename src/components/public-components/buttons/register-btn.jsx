@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import * as styles from './buttons.module.css'
 

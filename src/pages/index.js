@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../components/public-components/layout/layout"
 import Seo from "../components/public-components/header/seo"
 import Banner from "../components/public-components/banner/banner"
-import NavTabs from "../components/public-components/navigations/nav-tabs"
+import PredictionTable from "../components/public-components/predictionTable/predictionTable"
 
 const IndexPage = () => {
   console.log(process.env)
@@ -10,7 +10,7 @@ const IndexPage = () => {
   <Layout>
     <Seo title="Home" />
     <Banner />
-    <NavTabs />
+    <PredictionTable />
   </Layout>
 )
 }

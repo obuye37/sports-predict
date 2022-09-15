@@ -1,9 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import axios from "axios";
 import { useState, useEffect } from 'react';
 
 import * as styles from './leagues.module.css'
-import { Epl } from './nav-tabs-data';
 
 const Leagues = ({competitions}) => {
   const [fixtures, setFixtures] = useState([])
@@ -25,13 +24,21 @@ const Leagues = ({competitions}) => {
     });
   }, [])
 
+  const [ predict, setPredict ] = useState(fixtures)
+
   const addPrediction = (e) => {
     e.preventDefault()
-    console.log("edit prediction was clicked")
+    const homeValue = e.target.name['home'].value
+    const awayValue = e.target.name['away'].value
+    setPredict(...predict, {awayPrediction:awayValue, homePrediction:homeValue})
   }
 
+  useEffect(() => {
+      console.log('send info to mongodb/firebase')
+  }, [predict])
+
   return (
-    <Fragment>
+    <div>
       {
         Object.keys(fixtures).map((matchday) => (
           <div style={{ backgroundColor:'white', padding:'10px 0', marginBottom:'5px' }} key={matchday}>
@@ -44,14 +51,20 @@ const Leagues = ({competitions}) => {
                 <div className={styles.cardBody}>
                   <img src={homeLogo} alt={`${homeTeam} logo`} />
                   <h3>{homeTeam}</h3>
+                  <input style={{width:'10%'}} type='text' name='home-score' />
+
+
                   <div style={{display:'flex', justifyContent:'center', alignItems:'baseline'}}>
-                    <hr style={{width:'25%', justifySelf:'center'}} /> <span style={{fontSize:'24px', margin:'0 5px'}}>vs</span> <hr style={{width:'25%'}}  />
-                  </div>
+                    <span style={{fontSize:'24px', margin:'0 5px'}}>vs</span>
+                  </div> 
+
+                  
+                  <input style={{width:'10%'}} type='text' name='away-score' />
                   <img src={awayLogo} alt={`${awayTeam} logo`} />
                   <h3>{awayTeam}</h3>
+                 
                   <button onClick={addPrediction}>Predict Match Result</button>
                 </div>
-                
               </div>
             )))
             }
@@ -60,7 +73,7 @@ const Leagues = ({competitions}) => {
           )
         )  
       }
-    </Fragment>
+    </div>
   )
 }
 

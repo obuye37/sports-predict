@@ -1,3 +1,11 @@
 .fixtureRowContainer {
     display:flex;
 }
+
+.tabList {
+    list-style: none;
+    display: flex;
+    gap:20px;
+    cursor: pointer;
+    color:beige
+}

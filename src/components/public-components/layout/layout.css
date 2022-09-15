@@ -42,11 +42,7 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
-  background-color: #121212ff;
-  background-image: url('../../../images/stadium.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #121212;
 }
 a {
   background-color: transparent;

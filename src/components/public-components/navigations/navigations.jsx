@@ -7,7 +7,7 @@ const styles = {
     color: `white`,
   }
 
-  const menuLinks = ['About us', 'News', 'History', 'Contact us']
+  const menuLinks = ['About us', 'Reviews', 'Contact us']
 
 const Navigation = () => {
   return (
