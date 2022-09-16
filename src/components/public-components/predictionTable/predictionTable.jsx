@@ -54,16 +54,16 @@ const  PredictionTable = ({ league }) => {
         {matches.map(({id, MatchDay, awayLogo, awayTeam, homeLogo, homeTeam, homePrediction, awayPrediction }) => {
             return (
             <div key={id} className={styles.table_body}>
-                <div>{id}</div>
+                <div className={styles.index}>{id}</div>
                 <div className={styles.fixtures}>
                     <div className={styles.hometeam}>
                         <img className='teamlogo' src={homeLogo} alt={`${homeTeam} Logo`}/>
-                        <div>{homeTeam}</div>
+                        <div className={styles.teamname}>{homeTeam}</div>
                         <div className={styles.predictions}>{homePrediction}</div>
                     </div>
                     <div className={styles.awayteam}>
                         <div className={styles.predictions}>{awayPrediction}</div>
-                        <div>{awayTeam}</div>
+                        <div className={styles.teamname}>{awayTeam}</div>
                         <img src={awayLogo} className="teamlogo" alt={`${awayTeam} Logo`} />
                     </div>
                 </div>

@@ -1,0 +1,49 @@
+.container {
+    height: 200px; 
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    overflow:hidden;
+    padding: 10%;
+  }
+
+.textCenter {
+    text-align: center;
+  }
+  
+  .maininfo {
+    font-size: 6vw;
+    color:var(--color-primary);
+    font-weight: bold;
+    margin:0;
+    line-height: 10vh;
+    margin-bottom: 3vh
+    }
+  
+    .info {
+        font-size: 3vw; 
+        font-weight:bold;
+        margin:0
+    }
+
+    /* Media Queries */
+    @media only screen and (max-width:720px) {
+        .container {
+            font-size: 10px;
+        }
+        .maininfo {
+            font-size: 8vw;
+            line-height: 30px;
+        }
+        .info {
+            font-size: 4vw; 
+            font-weight: bold;
+            margin:0
+        }
+    
+    }
+
+    

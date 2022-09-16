@@ -1,0 +1,38 @@
+.container {
+    display: relative;
+}
+
+.navMenu {
+    font-size: var(--font-sm);
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+  }
+
+  .mobileMenu {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    z-index: 1000
+
+  }
+
+.hambugger {
+    display:none;
+    cursor: pointer;    
+}
+
+@media only screen and (max-width:720px) {
+    .hambugger{
+        display: block;
+    }
+    .navMenu {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+    
+}
+

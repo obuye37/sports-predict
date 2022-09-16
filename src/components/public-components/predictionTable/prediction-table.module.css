@@ -11,31 +11,40 @@
 .table_body {
     background-color:whitesmoke;
     margin: 10px auto;
-    padding: 1.5rem 1.2rem;
-    display: flex;
     justify-content: space-between;
     padding: 1rem 1.3rem;
     display: grid;
-    grid-template-columns: 1fr 9fr 2fr;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.index {
+    grid-area: index;
+}
+
+.prediction{
+    grid-area: prediction;
+}
+
+.date {
+    grid-area: date;
 }
 
 .table_container { 
-    min-width:90%; 
+    max-width:90%; 
     margin: 10px auto;
-    width:85%;
 }
 
 .fixtures {
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap:10px;
-    padding: 0 10%;
 }
 
 .hometeam, .awayteam {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 /* .teamlogo {
@@ -51,9 +60,65 @@
 .predictions {
     font-weight: bold;
     padding:7px 10px;
-    border-radius: 10%;
     box-sizing:border-box;
-    border-width: 2px;
-    box-shadow: 0px 1px 5px 2px forestgreen inset;
     font-size: 1.2rem;
 }
+
+@media only screen and (max-width: 640px) {
+    /* .hometeam, .awayteam {
+        display: block;
+        align-items: center;
+    
+    } */
+
+    /* .hometeam div, .awayteam div {
+        text-align: center;
+    } */
+    
+    .fixtures {
+        grid-area: fixtures;
+        grid-template-columns: none;
+        padding: 10px;
+    } 
+
+    .table_body {
+        border-radius: 10px;
+        grid-template-columns: 20px repeat(5, 1fr);
+        grid-template-areas: 
+        "index date date date date date"
+        "index fixtures fixtures fixtures fixtures fixtures";
+    }
+    .index {
+        grid-area: index;
+        /* align-self: center; */
+        justify-self: center;
+        font-size: 1.2rem;
+
+    }
+    .matchday {
+        grid-area: date;
+    }
+
+    .hometeam {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .awayteam {
+        display: flex;
+        justify-content: space-between;
+    }
+    .awayteam .teamlogo {
+        order: 1;
+    }
+    .awayteam .teamname {
+        order: 2;
+    }
+    .awayteam .predictions {
+        order: 3;
+    }
+}
+
+
+
+

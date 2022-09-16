@@ -1,25 +1,32 @@
 import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
+import { Menu } from 'react-feather'
 
-const styles = {
-    fontSize: `var(--font-sm)`,
-    textDecoration: `none`,
-    color: `white`,
-  }
+import * as styles from './navigations.module.css'
 
-  const menuLinks = ['About us', 'Reviews', 'Contact us']
+const menuLinks = ['About us', 'Reviews', 'Contact us']
 
 const Navigation = () => {
   return (
-    <Fragment>
+    <div className={styles.container}>
         { menuLinks.map( (navlink, idx) => 
         <div key={idx} >
-           <Link to={navlink.replace(" ", "-").toLowerCase()} style={ {...styles, margin: '0 10px' } }>
+           <Link to={navlink.replace(" ", "-").toLowerCase()} className={styles.navMenu }>
               {navlink}
           </Link>
         </div>
        ) }
-    </Fragment>
+        <Menu className={styles.hambugger} />
+        <nav className={styles.mobileMenu}>
+          { menuLinks.map( (navlink, idx) => 
+          <div key={idx} >
+            <Link to={navlink.replace(" ", "-").toLowerCase()} className={styles.navMenu }>
+                {navlink}
+            </Link>
+          </div>
+        ) }
+        </nav>
+    </div>
   )
 }
 

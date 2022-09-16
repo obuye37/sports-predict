@@ -10,14 +10,10 @@ const Footer = () => {
   return (
 
     <footer
-        style={{
-        fontSize: `var(--font-sm)`,
-        color: `#ddd`,
-        backgroundColor:'#121212ee',
-        }}
+        className={styles.footer}
     >
       <div className={styles.top_footer}>
-        <div style={{display:'grid', gap:'10px', padding :`var(--space-5)`, }}>
+        <div style={{display:'flex', flexDirection: 'column', gap:'10px', padding :`var(--space-5)`, }}>
           <div>Logo</div>
           <div>
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. 
@@ -31,20 +27,24 @@ const Footer = () => {
             <PhoneCall style={{cursor:'pointer'}} />
           </div>
         </div>
-        <div>
+        <div style={{display:'flex', flexDirection: 'column', gap:'10px', padding :`var(--space-5)`, }}>
           <h2 style={{ margin:0, }}>Quick Links</h2>
           <Navigation />
           <Link to="/admin">Login Admin</Link>
         </div>
-        <div>
+        <div style={{display:'flex', alignItems:'center', flexDirection: 'column', gap:'10px', padding :`var(--space-5)`, }}>
           <h2 style={{
-            fontFamily: `var(--font-sans)`
+            fontFamily: `var(--font-sans)`,
+            textAlign: 'center',
           }}>Subscribe to Our Newsletter</h2>
           <div>
             <input type="email" name="" id="" />
             <input type="button" value="Subscribe" />
           </div>
-          <small>Subscribe to receive our weekly predictions earlier</small>
+          <small style={{
+            fontFamily: `var(--font-sans)`,
+            textAlign: 'center',
+          }}>Subscribe to receive our weekly predictions earlier</small>
         </div>
       </div>
       <div className={styles.bottom_footer}>
