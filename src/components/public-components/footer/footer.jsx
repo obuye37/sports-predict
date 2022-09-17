@@ -32,19 +32,16 @@ const Footer = () => {
           <Navigation />
           <Link to="/admin">Login Admin</Link>
         </div>
-        <div style={{display:'flex', alignItems:'center', flexDirection: 'column', gap:'10px', padding :`var(--space-5)`, }}>
+        <div className={styles.subContainer}>
           <h2 style={{
             fontFamily: `var(--font-sans)`,
             textAlign: 'center',
           }}>Subscribe to Our Newsletter</h2>
-          <div>
-            <input type="email" name="" id="" />
-            <input type="button" value="Subscribe" />
+          <div className={styles.formContainer}>
+            <input type="email" />
+            <button>Subscribe</button>
           </div>
-          <small style={{
-            fontFamily: `var(--font-sans)`,
-            textAlign: 'center',
-          }}>Subscribe to receive our weekly predictions earlier</small>
+          <div className={styles.small}>Subscribe to receive our weekly predictions earlier</div>
         </div>
       </div>
       <div className={styles.bottom_footer}>

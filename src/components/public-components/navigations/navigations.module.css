@@ -2,19 +2,15 @@
     display: relative;
 }
 
+.mobileMenu {
+    display: none;
+}
+
 .navMenu {
     font-size: var(--font-sm);
     text-decoration: none;
     color: white;
     margin: 0 10px;
-  }
-
-  .mobileMenu {
-    display: none;
-    position: absolute;
-    width: 100vw;
-    z-index: 1000
-
   }
 
 .hambugger {
@@ -31,8 +27,29 @@
     }
 
     .mobileMenu {
-        display: block;
-    }
-    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        width: 100vw;
+        height: 100vw;
+        z-index: 1000;
+        top:0;
+        left:0;
+        background: #212121;
+      }
+
+      .mobileNav {
+        text-decoration: none;
+        color:wheat;
+      }
+
+      .closeNav {
+        font-size: 3rem;
+        color: wheat;
+        align-self: end;
+        cursor: pointer;
+        margin-right: 2rem;
+      }
 }
 

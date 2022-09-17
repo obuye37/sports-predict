@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => {
       {siteTitle}
     </Link>
     <div style={{display:'flex'}}>
-      <Navigation />
+      <Navigation display='flex' />
     </div>
     <div style={styles}>
       <span style={{cursor:"pointer"}}>Join</span>

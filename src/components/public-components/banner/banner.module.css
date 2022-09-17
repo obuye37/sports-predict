@@ -15,11 +15,11 @@
   }
   
   .maininfo {
-    font-size: 6vw;
+    font-size: 3vw;
     color:var(--color-primary);
     font-weight: bold;
     margin:0;
-    line-height: 10vh;
+    line-height: 1vh;
     margin-bottom: 3vh
     }
   

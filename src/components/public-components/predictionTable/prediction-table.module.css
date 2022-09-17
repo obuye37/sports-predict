@@ -10,15 +10,11 @@
 
 .table_body {
     background-color:whitesmoke;
-    margin: 10px auto;
+    margin: 5px auto;
     justify-content: space-between;
     padding: 1rem 1.3rem;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-}
-
-.index {
-    grid-area: index;
 }
 
 .prediction{
@@ -65,15 +61,6 @@
 }
 
 @media only screen and (max-width: 640px) {
-    /* .hometeam, .awayteam {
-        display: block;
-        align-items: center;
-    
-    } */
-
-    /* .hometeam div, .awayteam div {
-        text-align: center;
-    } */
     
     .fixtures {
         grid-area: fixtures;
@@ -90,7 +77,6 @@
     }
     .index {
         grid-area: index;
-        /* align-self: center; */
         justify-self: center;
         font-size: 1.2rem;
 
